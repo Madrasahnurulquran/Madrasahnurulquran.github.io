@@ -244,27 +244,20 @@ nav ul li a:hover {
 
 /* Responsif untuk smartphone (lebar layar 480px atau lebih kecil) */
 @media (max-width: 480px) {
-  .container {
-    width: 100%; /* Gunakan lebar kontainer penuh */
+  .contact-details {
+    flex-direction: column; /* Ubah arah menjadi kolom */
+    align-items: center; /* Pusatkan konten */
   }
 
-  nav ul li {
-    margin: 0 5px; /* Perkecil jarak antar menu navigasi */
+  .contact-item {
+    width: 100%;
+    max-width: 300px; /* Lebar maksimum untuk kontak item */
+    overflow: hidden; /* Sembunyikan konten yang berlebihan */
+    max-height: 0; /* Sembunyikan konten */
+    transition: max-height 0.5s ease-out; /* Animasi slide */
   }
 
-  .section h2 {
-    font-size: 1.5em; /* Perkecil ukuran judul */
-  }
-
-  .section p {
-    font-size: 0.9em; /* Perkecil ukuran teks */
-  }
-
-  .image-grid img {
-    width: 100%; /* Gambar mengisi lebar layar */
-  }
-
-  .footer {
-    font-size: 0.8em; /* Perkecil ukuran teks footer */
+  .contact-item.active {
+    max-height: 300px; /* Tampilkan konten */
   }
 }
