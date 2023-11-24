@@ -188,6 +188,16 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+/* CSS untuk ikon */
+.contact-item h3 i {
+  margin-right: 5px; /* Jarak antara ikon dan teks */
+}
+
+/* CSS untuk membuat ikon lebih besar dan terlihat lebih baik */
+.contact-item h3 i {
+  font-size: 1.2em; /* Ukuran ikon */
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Membuat grid dengan 3 kolom */
