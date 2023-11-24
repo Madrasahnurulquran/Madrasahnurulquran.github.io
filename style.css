@@ -219,3 +219,52 @@ nav ul li a:hover {
   text-align: center;
   padding: 20px 0;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Mengurangi lebar kontainer */
+  }
+
+  nav ul {
+    justify-content: center; /* Pusatkan menu navigasi */
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Perkecil jarak antar menu navigasi */
+  }
+
+  .section h2 {
+    font-size: 2em; /* Perkecil ukuran judul */
+  }
+
+  .section p {
+    font-size: 1em; /* Perkecil ukuran teks */
+  }
+}
+
+/* Responsif untuk smartphone (lebar layar 480px atau lebih kecil) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%; /* Gunakan lebar kontainer penuh */
+  }
+
+  nav ul li {
+    margin: 0 5px; /* Perkecil jarak antar menu navigasi */
+  }
+
+  .section h2 {
+    font-size: 1.5em; /* Perkecil ukuran judul */
+  }
+
+  .section p {
+    font-size: 0.9em; /* Perkecil ukuran teks */
+  }
+
+  .image-grid img {
+    width: 100%; /* Gambar mengisi lebar layar */
+  }
+
+  .footer {
+    font-size: 0.8em; /* Perkecil ukuran teks footer */
+  }
+}
