@@ -58,3 +58,32 @@ function initMap() {
     title: "Madrasah Nurul Qur'an",
   });
 }
+
+// Ambil semua elemen contact-item
+const contactItems = document.querySelectorAll(".contact-item");
+
+// Tambahkan event click pada setiap contact-item
+contactItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    // Hilangkan kelas 'active' dari semua contact-item
+    contactItems.forEach((element) => {
+      if (element !== item) {
+        element.classList.remove("active");
+      }
+    });
+
+    // Toggle kelas 'active' pada elemen yang diklik
+    item.classList.toggle("active");
+  });
+});
+
+function toggleDescription(type) {
+  const descriptions = document.querySelectorAll(".description");
+  descriptions.forEach((desc) => {
+    if (desc.id === type) {
+      desc.parentElement.classList.toggle("active");
+    } else {
+      desc.parentElement.classList.remove("active");
+    }
+  });
+}

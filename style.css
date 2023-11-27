@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  background-color: #1e3a6f; /* Warna biru tua */
+  background-color: #ffcd48; /* Warna biru tua */
   color: #fff; /* Warna teks putih */
   padding: 20px 0;
   position: fixed;
@@ -62,14 +62,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 1.2em;
   transition: color 0.3s ease; /* Efek perubahan warna */
 }
 
 nav ul li a:hover {
-  color: #ffc107; /* Warna kuning saat hover */
+  color: #d41f07; /* Warna kuning saat hover */
 }
 
 /* Sections */
@@ -224,7 +224,7 @@ nav ul li a:hover {
 }
 
 .footer {
-  background-color: #2c2c2c; /* Nuansa gelap yang dalam */
+  background-color: #f4ce14; /* Nuansa gelap yang dalam */
   color: #fff; /* Warna teks putih */
   text-align: center;
   padding: 20px 0;
@@ -253,12 +253,8 @@ nav ul li a:hover {
 }
 
 /* Responsif untuk smartphone (lebar layar 480px atau lebih kecil) */
+/* Responsif untuk smartphone (lebar layar 480px atau lebih kecil) */
 @media (max-width: 480px) {
-  .contact-details {
-    flex-direction: column; /* Ubah arah menjadi kolom */
-    align-items: center; /* Pusatkan konten */
-  }
-
   .contact-item {
     width: 100%;
     max-width: 300px; /* Lebar maksimum untuk kontak item */
@@ -269,5 +265,54 @@ nav ul li a:hover {
 
   .contact-item.active {
     max-height: 300px; /* Tampilkan konten */
+  }
+  .header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header nav {
+    width: 100%;
+    order: 3; /* Menentukan urutan tampilan */
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 5px; /* Atur jarak antar menu */
+  }
+  .logo h1 {
+    font-size: 1.5em; /* Atur ukuran teks lebih kecil */
+  }
+
+  .contact-details {
+    flex-direction: column; /* Ubah tata letak menjadi kolom */
+    align-items: center; /* Pusatkan konten */
+  }
+
+  .contact-item {
+    width: 100%;
+    max-width: 300px; /* Lebar maksimum untuk setiap item kontak */
+    overflow: hidden; /* Sembunyikan konten yang berlebihan */
+    max-height: 0; /* Sembunyikan konten */
+    transition: max-height 0.5s ease-out; /* Animasi slide */
+    margin-bottom: 10px; /* Berikan jarak antar item */
+  }
+
+  .contact-item.active {
+    max-height: 300px; /* Tampilkan konten */
+  }
+
+  .contact-item .description {
+    display: none; /* Sembunyikan deskripsi secara default */
+  }
+
+  .contact-item.active .description {
+    display: block; /* Tampilkan deskripsi saat kelas active ditambahkan */
   }
 }
