@@ -87,3 +87,22 @@ function toggleDescription(type) {
     }
   });
 }
+
+const slider = document.querySelector(".slider");
+let isMoving = false;
+
+slider.addEventListener("mouseover", () => {
+  isMoving = true;
+});
+
+slider.addEventListener("mouseout", () => {
+  isMoving = false;
+});
+
+function scrollSlider() {
+  if (isMoving) {
+    slider.scrollLeft += 2; // Ubah nilai ini untuk mengatur kecepatan scroll
+  }
+}
+
+setInterval(scrollSlider, 50); // Ubah nilai interval untuk mengatur kecepatan slide otomatis

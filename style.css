@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  background-color: #ffcd48; /* Warna biru tua */
+  background-color: #192a51; /* Warna biru tua */
   color: #fff; /* Warna teks putih */
   padding: 20px 0;
   position: fixed;
@@ -134,6 +134,61 @@ nav ul li a:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* CSS untuk menambahkan efek hover pada gambar profil */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS untuk galeri gambar */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 2 baris */
+  gap: 10px; /* Jarak antar gambar */
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.slides img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#profilContent {
+  display: none;
+}
+
+#profilContent.active {
+  display: block;
+}
+
 #visiContent,
 #profilContent,
 #petaContent {
@@ -224,7 +279,7 @@ nav ul li a:hover {
 }
 
 .footer {
-  background-color: #f4ce14; /* Nuansa gelap yang dalam */
+  background-color: #67729d; /* Nuansa gelap yang dalam */
   color: #fff; /* Warna teks putih */
   text-align: center;
   padding: 20px 0;
